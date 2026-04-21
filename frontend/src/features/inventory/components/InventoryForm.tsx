@@ -22,7 +22,6 @@ export function InventoryForm({ onSuccess, onCancel }: InventoryFormProps) {
         defaultValues: {
             name: '',
             category: '',
-            supplier_id: '',
             serial_number: '',
             quantity: 1,
             purchase_date: '',
@@ -74,11 +73,6 @@ export function InventoryForm({ onSuccess, onCancel }: InventoryFormProps) {
                         placeholder="Izoh yozing..."
                         {...register('notes')}
                     />
-                </div>
-                {/* Note: Supplier integration pending full lookup */}
-                <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Firma ID</label>
-                    <Input placeholder="Firma UUID" {...register('supplier_id')} error={errors.supplier_id?.message} />
                 </div>
             </div>
 

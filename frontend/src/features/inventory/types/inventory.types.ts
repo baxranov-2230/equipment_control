@@ -4,7 +4,7 @@ export interface Inventory {
     id: string;
     name: string;
     category: string;
-    supplier_id: string;
+    supplier_id: string | null;
     serial_number: string;
     quantity: number;
     purchase_date: string;
@@ -18,7 +18,7 @@ export interface InventoryWithDetails extends Inventory {
     supplier: {
         id: string;
         name: string;
-    };
+    } | null;
     assignment: {
         id: string;
         employee_id: string;
